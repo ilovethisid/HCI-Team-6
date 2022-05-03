@@ -1,4 +1,4 @@
-# HCI-Team-6
+# CSC 642 HCI Team 6
 
 ## Group 6 Members:
 <ol>
