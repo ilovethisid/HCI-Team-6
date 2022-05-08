@@ -2,4 +2,18 @@
     <string name="app_name">BudgetManager</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="edittext_hint1"><font size="14">user123</font></string>
+    <string name="edittext_hint2"><font size="14">user@gmail.com</font></string>
+    <string name="edittext_hint3"><font size="14">Change Password</font></string>
+    <string name="edittext_hint4"><font size="14">Chase Account Ending in 1234 </font></string>
+
+    <string name="addbank"><font size="12">Add bank Account</font></string>
+    <string name="pass"><font size="12">Change Password</font></string>
+    <string name="removelinked"><font size="12">Remove Linked Account </font></string>
+    <string name="budget"><font size="12">Create Budget </font></string>
+
+
+
+
 </resources>
