@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MonthlySummary">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/monthly_summary_header"
+            android:layout_width="0dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="32dp"
+            android:text="April Spending Summary"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.anychart.AnyChartView
+            android:id="@+id/pie_chart"
+            android:layout_width="377dp"
+            android:layout_height="341dp"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/scrolling_months"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.529"
+            app:layout_constraintStart_toStartOf="parent" >
+
+        </com.anychart.AnyChartView>
+
+        <ProgressBar
+            android:id="@+id/pie_chart_loading_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:id="@+id/scrolling_months"
+            android:layout_width="412dp"
+            android:layout_height="89dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent">
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/month_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/january"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jan" />
+
+                <Button
+                    android:id="@+id/february"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Feb" />
+
+                <Button
+                    android:id="@+id/march"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mar" />
+
+                <Button
+                    android:id="@+id/april"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Apr" />
+
+                <Button
+                    android:id="@+id/may"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="May" />
+
+                <Button
+                    android:id="@+id/june"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="June" />
+
+                <Button
+                    android:id="@+id/july"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="July" />
+
+                <Button
+                    android:id="@+id/august"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Aug" />
+
+                <Button
+                    android:id="@+id/september"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sept" />
+
+                <Button
+                    android:id="@+id/october"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Oct" />
+
+                <Button
+                    android:id="@+id/november"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nov" />
+
+                <Button
+                    android:id="@+id/december"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dec" />
+            </LinearLayout>
+            </HorizontalScrollView>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
