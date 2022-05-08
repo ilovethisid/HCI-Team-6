@@ -1,7 +1,6 @@
 package com.example.budgetmanager;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
@@ -27,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         VPAdapter vpAdapter = new VPAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         vpAdapter.addFragment(new Home(), "Home");
         vpAdapter.addFragment(new Transactions(), "Transactions");
-        vpAdapter.addFragment(new Calendar(), "Calendar");
+        vpAdapter.addFragment(new MonthlySummary(), "Monthly Summary");
         viewPager.setAdapter(vpAdapter);
     }
 }
