@@ -29,11 +29,11 @@
             android:id="@+id/pie_chart"
             android:layout_width="377dp"
             android:layout_height="341dp"
-            android:layout_marginBottom="40dp"
-            app:layout_constraintBottom_toTopOf="@+id/scrolling_months"
+            android:layout_marginBottom="148dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.529"
-            app:layout_constraintStart_toStartOf="parent" >
+            app:layout_constraintStart_toStartOf="parent">
 
         </com.anychart.AnyChartView>
 
@@ -48,93 +48,109 @@
 
         <ScrollView
             android:id="@+id/scrolling_months"
-            android:layout_width="412dp"
-            android:layout_height="89dp"
+            android:layout_width="392dp"
+            android:layout_height="85dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pie_chart"
+            app:layout_constraintVertical_bias="0.746">
+
             <HorizontalScrollView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-            <LinearLayout
-                android:id="@+id/month_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/january"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/month_container"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Jan" />
+                    android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/february"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Feb" />
+                    <Button
+                        android:id="@+id/january"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jan"
+                        android:textAlignment="center" />
 
-                <Button
-                    android:id="@+id/march"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Mar" />
+                    <Button
+                        android:id="@+id/february"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Feb"
+                        android:textAlignment="center" />
 
-                <Button
-                    android:id="@+id/april"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Apr" />
+                    <Button
+                        android:id="@+id/march"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mar"
+                        android:textAlignment="center" />
 
-                <Button
-                    android:id="@+id/may"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="May" />
+                    <Button
+                        android:id="@+id/april"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Apr"
+                        android:textAlignment="center" />
 
-                <Button
-                    android:id="@+id/june"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="June" />
+                    <Button
+                        android:id="@+id/may"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="May"
+                        android:textAlignment="center" />
 
-                <Button
-                    android:id="@+id/july"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="July" />
+                    <Button
+                        android:id="@+id/june"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="June"
+                        android:textAlignment="center" />
 
-                <Button
-                    android:id="@+id/august"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Aug" />
+                    <Button
+                        android:id="@+id/july"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="July"
+                        android:textAlignment="center" />
 
-                <Button
-                    android:id="@+id/september"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sept" />
+                    <Button
+                        android:id="@+id/august"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Aug"
+                        android:textAlignment="center" />
 
-                <Button
-                    android:id="@+id/october"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Oct" />
+                    <Button
+                        android:id="@+id/september"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sept"
+                        android:textAlignment="center" />
 
-                <Button
-                    android:id="@+id/november"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nov" />
+                    <Button
+                        android:id="@+id/october"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Oct"
+                        android:textAlignment="center" />
 
-                <Button
-                    android:id="@+id/december"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Dec" />
-            </LinearLayout>
+                    <Button
+                        android:id="@+id/november"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nov"
+                        android:textAlignment="center" />
+
+                    <Button
+                        android:id="@+id/december"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dec"
+                        android:textAlignment="center" />
+                </LinearLayout>
             </HorizontalScrollView>
 
         </ScrollView>
