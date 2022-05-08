@@ -3,12 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Documents/Github/HCI-Team-6/BudgetManager/app/src/main/res/layout/fragment_monthly_summary.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Thomas/Documents/SFSU/Spring 2022/CSC 642 - Human Computer Interaction/HCI-Team-6/BudgetManager/app/src/main/res/layout/fragment_pie_chart.xml" value="0.33" />
         <entry key="..\:/Users/ilove/AndroidStudioProjects/AppProgramming/BudgetManager/app/src/main/res/drawable/border.xml" value="0.1953125" />
         <entry key="..\:/Users/ilove/AndroidStudioProjects/AppProgramming/BudgetManager/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/ilove/AndroidStudioProjects/AppProgramming/BudgetManager/app/src/main/res/layout/fragment_calendar.xml" value="0.22" />
         <entry key="..\:/Users/ilove/AndroidStudioProjects/AppProgramming/BudgetManager/app/src/main/res/layout/fragment_home.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/ilove/AndroidStudioProjects/AppProgramming/BudgetManager/app/src/main/res/layout/fragment_transactions.xml" value="0.16458333333333333" />
-        <entry key="..\:/Users/Thomas/Documents/SFSU/Spring 2022/CSC 642 - Human Computer Interaction/HCI-Team-6/BudgetManager/app/src/main/res/layout/fragment_pie_chart.xml" value="0.33" />
       </map>
     </option>
   </component>
