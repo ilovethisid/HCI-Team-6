@@ -1,12 +1,19 @@
 package com.example.budgetmanager;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +30,7 @@ public class Home extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private Button create_budget;
 
     public Home() {
         // Required empty public constructor
@@ -47,12 +55,36 @@ public class Home extends Fragment {
     }
 
     @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        create_budget = (Button)getView().findViewById(R.id.create_budget);
+        create_budget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                openCreateBudget();
+            }
+        });
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+    }
+
+    public void openCreateBudget() {
+        replaceFragment();
+    }
+
+    public void replaceFragment() {
+        FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+        Fragment fragment = new CreateBudget();
+        transaction.replace(R.id.tablayout, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 
     @Override
