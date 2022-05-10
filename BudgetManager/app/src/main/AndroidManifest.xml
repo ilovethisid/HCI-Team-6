@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BudgetManager">
         <activity
+            android:name=".Profile"
+            android:exported="true" />
+        <activity
+            android:name=".CreateBudget"
+            android:exported="true" />
+        <activity
             android:name=".budget_pie_chart"
             android:exported="false" />
         <activity

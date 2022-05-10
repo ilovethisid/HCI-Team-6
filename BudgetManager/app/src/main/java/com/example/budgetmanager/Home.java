@@ -6,14 +6,12 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -31,6 +29,7 @@ public class Home extends Fragment {
     private String mParam1;
     private String mParam2;
     private Button create_budget;
+    private ImageButton profile;
 
     public Home() {
         // Required empty public constructor
@@ -57,11 +56,19 @@ public class Home extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        create_budget = (Button)getView().findViewById(R.id.create_budget);
+        create_budget = (Button) getView().findViewById(R.id.create_budget);
         create_budget.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                openCreateBudget();
+                openCreateBudget();
+            }
+        });
+
+        profile = (ImageButton) getView().findViewById(R.id.profileButton);
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openProfile();
             }
         });
     }
@@ -76,15 +83,13 @@ public class Home extends Fragment {
     }
 
     public void openCreateBudget() {
-        replaceFragment();
+        Intent intent = new Intent(getActivity(), CreateBudget.class);
+        startActivity(intent);
     }
 
-    public void replaceFragment() {
-        FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-        Fragment fragment = new CreateBudget();
-        transaction.replace(R.id.tablayout, fragment);
-        transaction.addToBackStack(null);
-        transaction.commit();
+    public void openProfile() {
+        Intent intent = new Intent(getActivity(), Profile.class);
+        startActivity(intent);
     }
 
     @Override
